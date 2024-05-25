@@ -14,7 +14,7 @@ const sepolia = require("./tokens/sepolia.json");
 const avalanche = require("./tokens/avalanche.json");
 const base = require("./tokens/base.json");
 
-const bridgeUtils = require('@uniswap/token-list-bridge-utils');
+const bridgeUtils = require("swifydex-token-list-bridge-utils");
 
 module.exports = function buildList() {
   const parsed = version.split(".");
@@ -43,7 +43,7 @@ module.exports = function buildList() {
       ...bnb,
       ...sepolia,
       ...avalanche,
-      ...base
+      ...base,
     ]
       // sort them by symbol for easy readability
       .sort((t1, t2) => {
